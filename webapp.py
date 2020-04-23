@@ -5,7 +5,7 @@ import sqlite3
 import psycopg2
 
 '''
-    Will have t change the host, database, user, and password for Flask connection
+    Will have to change the host, database, user, and password for Flask connection
 '''
 
 app = Flask(__name__)
