@@ -11515,7 +11515,7 @@
                                         }
                                         
                                         body {
-                                            background-color: #f1f1f1;
+                                            background-color: #ffffff;
                                         }
                                         
                                         #regForm {
@@ -11600,8 +11600,10 @@
                                                 <p><input placeholder="Date of Birth mm/dd/yyyy" oninput="this.className = ''" name="DOB"></p>
                                             </div>
                                             <div class="tab">Contact Info:
-                                                <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-                                                <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+                                                <p><input placeholder="Adress" oninput="this.className = ''" name="address"></p>
+                                                <p><input placeholder="Billing Address" oninput="this.className = ''" name="altaddress"></p>
+                                                <p><input placeholder="Phone Number" oninput="this.className = ''" name="phone"></p>
+                                                <p><input placeholder="Emergency Contact" oninput="this.className = ''" name="altphone"></p>
                                             </div>
                                             <div class="tab">Birthday:
                                                 <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
@@ -11609,6 +11611,10 @@
                                                 <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
                                             </div>
                                             <div class="tab">Login Info:
+                                                <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+                                                <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+                                            </div>
+                                            <div class="tab">Does this count?:
                                                 <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
                                                 <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
                                             </div>
@@ -11620,6 +11626,7 @@
                                             </div>
                                             <!-- Circles which indicates the steps of the form: -->
                                             <div style="text-align:center;margin-top:40px;">
+                                                <span class="step"></span>
                                                 <span class="step"></span>
                                                 <span class="step"></span>
                                                 <span class="step"></span>
