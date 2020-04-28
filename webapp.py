@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 
 
 '''
-    Will have to change the host, database, user, and password for Flask connection
+    Will need to change the host, database, user, and password for Flask connection
 '''
 
 app = Flask(__name__)
