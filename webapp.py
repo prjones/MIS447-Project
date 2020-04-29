@@ -28,6 +28,10 @@ def registration():
 def individualForm():
     return render_template("individualForm.html")
 
+@app.route('/guardianForm')
+def guardianForm():
+    return render_template("guardianForm.html")
+
 # run the Flask app (which will launch a local webserver)
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
