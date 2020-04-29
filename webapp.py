@@ -24,6 +24,10 @@ def home():
 def registration():
     return render_template("RegistrationForm.html")
 
+@app.route('/individualForm')
+def individualForm():
+    return render_template("individualForm.html")
+
 # run the Flask app (which will launch a local webserver)
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
