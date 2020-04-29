@@ -11595,15 +11595,7 @@
                                                 
                                                 <p><input placeholder="Last Name" oninput="this.className = ''" name="lname"></p>
                                                 <p><input placeholder="Date of Birth mm/dd/yyyy" oninput="this.className = ''" name="DOB"></p>
-                                                <div>
-                                                    <label for="secondperson"style="word-wrap: break-word; line-height: 16px; float: left;"> Requesting meals for another person?
-                                                        <input type="checkbox" name="secondperson"style="float: left;" onclick="moreFormFunction()">
-                                                    </label> 
-                                                </div>
-                                                <div id="moreform">
-                                                    <p><input placeholder="First Name" oninput="this.className = ''" name="fname"></p>
-                                                    <p><input placeholder="Last Name" oninput="this.className = ''" name="lname"></p>
-                                                </div>
+                                                
 
                                             <div class="tab">Contact Info:
                                                 <p><input placeholder="Adress" oninput="this.className = ''" name="address"></p>
@@ -11713,15 +11705,6 @@
                                                 }
                                                 //... and adds the "active" class on the current step:
                                                 x[n].className += " active";
-                                            }
-
-                                            function moreFormFunction() {
-                                            var x = document.getElementById("moreform");
-                                            if (x.style.display === "block") {
-                                                x.style.display = "none";
-                                            } else {
-                                                x.style.display = "block";
-                                            }
                                             }
                                         </script>
 
