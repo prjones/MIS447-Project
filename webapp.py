@@ -32,6 +32,10 @@ def individualForm():
 def guardianForm():
     return render_template("guardianForm.html")
 
+@app.route('/formsubmition')
+def formCompletion():
+    return render_template("formCompletion.html")
+
 # run the Flask app (which will launch a local webserver)
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
