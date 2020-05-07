@@ -11508,7 +11508,7 @@
                                         }
                                         
                                         body {
-                                            background-color: #ffffff;
+                                            background-color: #f1f1f1;
                                         }
                                         
                                         #regForm {
@@ -11584,56 +11584,61 @@
 
                                     <body>
 
-                                        <form id="regForm" action="/action_page.php">
-                                            <!--<h1>Register:</h1> -->
+                                        <form id="regForm" action="/formsubmition">
                                             <!-- One "tab" for each step in the form: -->
-                                            <div class="tab">Recipient's Name
+                                            <div class="tab">Recipient's Name:
                                                 <p><input placeholder="First Name" oninput="this.className = ''" name="fname"></p>
                                                 <p><input placeholder="Last Name" oninput="this.className = ''" name="lname"></p>
-                                                <p><label for="fname">Date of Recipient's Birth</label></p>
-                                                <p><input placeholder="(mm/dd/yyyy)" oninput="this.className = ''" name="DOB"></p>
-                                                <div>
-                                                </div>
+                                                <p><label for="dob">Date of Birth:</label></p>
+                                                <p><input placeholder="(mm/dd/yyyy)" oninput="this.className = ''" name="dob"></p>
                                                 <div id="moreform">
                                                     <p><label for="fname">Your Name</label></p>
                                                     <p><input placeholder="Your First Name" oninput="this.className = ''" name="fname"></p>
                                                     <p><input placeholder="Your Last Name" oninput="this.className = ''" name="lname"></p>
                                                 </div>
+                                            </div>
+                                            <div class="tab">Recipient's Primary & Billing Address:
+                                                <p><input placeholder="Primary Address" oninput="this.className = ''" name="street"></p>
+                                                <p><input placeholder="Billing Address" oninput="this.className = ''" name="billing"></p>
+                                                <p><label for="phone">Phone Number:</label></p>
+                                                <p><input placeholder="Primary Phone Number" oninput="this.className = ''" name="phone"></p>
+                                                <p><input placeholder="Emergency Phone Number" oninput="this.className = ''" name="emergphone"></p>
+                                            </div>
+                                            <div class="tab">Recipient's Demographics:
+                                                <p><input placeholder="Married or Single" oninput="this.className = ''" name="marital"></p>
+                                                <p><input placeholder="Race" oninput="this.className = ''" name="race"></p>
+                                            </div>
+                                            <div class="tab">Information:
+                                                <p><label for="homebound">Is the recipient homebound (do they require a walker or wheelchair, or need assistance from someone else to be able to leave home)?</label></p>
+                                                <p><input oninput="this.className = ''" name="homebound"></p>
+                                                <p><label for="medical">What medical concerns or diagnosis should our team be aware of (diabetes, cardiovascular or respiratory concerns, allergies or special dietary needs)?</label></p>
+                                                <p><input oninput="this.className = ''" name="pword" type="medical"></p>
+                                                <p><label for="specialinst">What special instructions would the recipient like the driver to follow when delivering the meal (for example, would they like the driver to just knock and enter and place a meal on the table, use a specific entrance, etc.)?</label></p>
+                                                <p><input oninput="this.className = ''" name="specialinst"></p>
+                                                <p><label for="delivery">A regular weekly schedule for meal delivery</label></p>
+                                                <p><input placeholder="Yes/No" oninput="this.className = ''" name="delivery"></p>
+                                            </div>
+                                            <div class="tab">If you would like to find out whether financial assistance is available, please also provide the following according to the recipient:
+                                                <p><input placeholder="Monthly income" oninput="this.className = ''" name="mincome"></p>
+                                                <p><input placeholder="Veteran Status (Yes or No)" oninput="this.className = ''" name="vetstatus"></p>
+                                                <p><label for="delivery">Out of pocket expenses for medicine and health and prescription insurance premiums</label></p>
+                                                <p><input oninput="this.className = ''" name="expenses"></p>
 
-                                                <div class="tab">Contact Info:
-                                                    <p><input placeholder="Recipient Address" oninput="this.className = ''" name="address"></p>
-                                                    <p><input placeholder="Billing Address" oninput="this.className = ''" name="altaddress"></p>
-                                                    <p><input placeholder="Recipient Phone Number" oninput="this.className = ''" name="phone"></p>
-                                                    <p><input placeholder="Emergency Contact Phone Number" oninput="this.className = ''" name="altphone"></p>
+                                            </div>
+                                            <div style="overflow:auto;">
+                                                <div style="float:right;">
+                                                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
                                                 </div>
-                                                <div class="tab">Birthday:
-                                                    <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-                                                    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-                                                    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
-                                                </div>
-                                                <div class="tab">Login Info:
-                                                    <p><input placeholder="Username" oninput="this.className = ''" name="uname"></p>
-                                                    <p><input placeholder="Password" oninput="this.className = ''" name="pword" type="password"></p>
-                                                    <p><input placeholder="Confirm Password" oninput="this.className = ''" name="pword" type="password"></p>
-                                                </div>
-                                                <div class="tab">Does this count?:
-                                                    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-                                                    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-                                                </div>
-                                                <div style="overflow:auto;">
-                                                    <div style="float:right;">
-                                                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                                                    </div>
-                                                </div>
-                                                <!-- Circles which indicates the steps of the form: -->
-                                                <div style="text-align:center;margin-top:40px;">
-                                                    <span class="step"></span>
-                                                    <span class="step"></span>
-                                                    <span class="step"></span>
-                                                    <span class="step"></span>
-                                                    <span class="step"></span>
-                                                </div>
+                                            </div>
+                                            <!-- Circles which indicates the steps of the form: -->
+                                            <div style="text-align:center;margin-top:40px;">
+                                                <span class="step"></span>
+                                                <span class="step"></span>
+                                                <span class="step"></span>
+                                                <span class="step"></span>
+                                                <span class="step"></span>
+                                            </div>
                                         </form>
 
                                         <script>
@@ -11708,15 +11713,6 @@
                                                 }
                                                 //... and adds the "active" class on the current step:
                                                 x[n].className += " active";
-                                            }
-
-                                            function moreFormFunction() {
-                                                var x = document.getElementById("moreform");
-                                                if (x.style.display === "block") {
-                                                    x.style.display = "none";
-                                                } else {
-                                                    x.style.display = "block";
-                                                }
                                             }
                                         </script>
 
@@ -11829,119 +11825,119 @@
 
                                 </div>
 
-                                </div>
+                            </div>
 
 
-                                <div class="group_1of4 first">
-
-
-
-
-
-
-                                    <h2>
-                                        Meals on Wheels Menu</h2>
-                                    <p><img alt="Meals on Wheels ingredients " src="/webres/Image/food.jpg"></p>
-
-                                    <p>Looking for healthy and delicious meals? Click on the link below to see our monthly menu.</p>
-
-                                    <p><a href="/webres/File/March%202020%20Menu.pdf" target="_blank" class="pdf">March 2020 Menu</a></p>
-
-                                    <p><a href="/webres/File/April%202020%20Menu%203%2022%2020.pdf" target="_blank" class="pdf">April 2020 Menu</a></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p style="margin-left: 40px;"></p>
-
-                                    <p style="margin-left: 40px;"></p>
-
-                                    <p style="margin-left: 40px;"></p>
-
-                                    <p></p>
+                            <div class="group_1of4 first">
 
 
 
 
 
 
+                                <h2>
+                                    Meals on Wheels Menu</h2>
+                                <p><img alt="Meals on Wheels ingredients " src="/webres/Image/food.jpg"></p>
+
+                                <p>Looking for healthy and delicious meals? Click on the link below to see our monthly menu.</p>
+
+                                <p><a href="/webres/File/March%202020%20Menu.pdf" target="_blank" class="pdf">March 2020 Menu</a></p>
+
+                                <p><a href="/webres/File/April%202020%20Menu%203%2022%2020.pdf" target="_blank" class="pdf">April 2020 Menu</a></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p style="margin-left: 40px;"></p>
+
+                                <p style="margin-left: 40px;"></p>
+
+                                <p style="margin-left: 40px;"></p>
+
+                                <p></p>
 
 
-                                    <h2>
-                                        Peace of Mind</h2>
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p></p>
-
-                                    <p><em>"WesleyLife Meals on Wheels give us peace of mind knowing Mom is getting the food she needs. We also appreciate that the driver is an extra pair of eyes, helping us make sure she's safe and healthy."</em></p>
-
-                                    <p>Norabeth Lacona, daughter of a WesleyLife Meals on Wheels client</p>
-
-                                    <p></p>
 
 
 
 
-                                </div>
+
+
+                                <h2>
+                                    Peace of Mind</h2>
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p></p>
+
+                                <p><em>"WesleyLife Meals on Wheels give us peace of mind knowing Mom is getting the food she needs. We also appreciate that the driver is an extra pair of eyes, helping us make sure she's safe and healthy."</em></p>
+
+                                <p>Norabeth Lacona, daughter of a WesleyLife Meals on Wheels client</p>
+
+                                <p></p>
+
+
+
+
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
         </section>
 
 
